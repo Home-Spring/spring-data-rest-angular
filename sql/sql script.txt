@@ -1,0 +1,60 @@
+create database javalessons_spring1;
+use javalessons_spring1;
+
+create table task_list(task_id int not null auto_increment, task_name varchar(100) not null, task_description text,task_priority varchar(20),task_status varchar(20),task_start_time datetime not null,task_end_time datetime not null,task_archived bool default false,primary key(task_id));
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+insert into task_list values(1,'Gathering Requirement','Requirement Gathering','MEDIUM','ACTIVE',CURDATE(),CURDATE() + INTERVAL 3 HOUR,0);
+insert into task_list values(2,'Application Designing','Application Designing','MEDIUM','ACTIVE',CURDATE(),CURDATE() + INTERVAL 2 HOUR,0);
+insert into task_list values(3,'Implementation','Implementation','MEDIUM','ACTIVE',CURDATE(),CURDATE() + INTERVAL 3 HOUR,0);
+insert into task_list values(4,'Unit Testing','Unit Testing','LOW','ACTIVE',CURDATE(),CURDATE() + INTERVAL 4 HOUR,0);
+insert into task_list values(5,'Maintanence','Maintanence','LOW','ACTIVE',CURDATE(),CURDATE() + INTERVAL 5 HOUR,0);
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DROP TABLE javalessons_spring1.task_list;
+
+CREATE TABLE `task_list`(
+    `task_id` int NOT NULL AUTO_INCREMENT,
+    `task_name` varchar(100) NOT NULL,
+    `task_description` text,
+    `task_priority` varchar(20),
+    `task_status` varchar(20),
+    `task_archived` bool DEFAULT FALSE,
+    PRIMARY KEY(`task_id`)
+);
+
+INSERT INTO task_list VALUES(1,'Gathering Requirement','Requirement Gathering','MEDIUM','ACTIVE',0);
+INSERT INTO task_list VALUES(2,'Application Designing','Application Designing','MEDIUM','ACTIVE',0);
+INSERT INTO task_list VALUES(3,'Implementation','Implementation','MEDIUM','ACTIVE',0);
+INSERT INTO task_list VALUES(4,'Unit Testing','Unit Testing','LOW','ACTIVE',0);
+INSERT INTO task_list VALUES(5,'Maintanence','Maintanence','LOW','ACTIVE',0);
+
+SELECT * FROM task_list;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+----------------------------------------------------------------------------------------------------
+DROP TABLE javalessons_spring1.task_list;
+
+CREATE TABLE `task_list` (
+  `task_id` int(11) NOT NULL AUTO_INCREMENT,
+  `task_name` varchar(100) DEFAULT NULL,
+  `task_description` text,
+  `task_priority` varchar(20) DEFAULT NULL,
+  `task_status` varchar(20) DEFAULT NULL,
+  `task_start_time` datetime DEFAULT NULL,
+  `task_end_time` datetime DEFAULT NULL,
+  `task_archived` bool DEFAULT FALSE,
+  PRIMARY KEY (`task_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+insert into task_list values(1,'Gathering Requirement','Requirement Gathering','MEDIUM','ACTIVE',CURDATE(),CURDATE() + INTERVAL 3 HOUR,0);
+insert into task_list values(2,'Application Designing','Application Designing','MEDIUM','ACTIVE',CURDATE(),CURDATE() + INTERVAL 2 HOUR,0);
+insert into task_list values(3,'Implementation','Implementation','MEDIUM','ACTIVE',CURDATE(),CURDATE() + INTERVAL 3 HOUR,0);
+insert into task_list values(4,'Unit Testing','Unit Testing','LOW','ACTIVE',CURDATE(),CURDATE() + INTERVAL 4 HOUR,0);
+insert into task_list values(5,'Maintanence','Maintanence','LOW','ACTIVE',CURDATE(),CURDATE() + INTERVAL 5 HOUR,0);
+
+SELECT * FROM task_list;
+----------------------------------------------------------------------------------------------------

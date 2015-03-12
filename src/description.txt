@@ -1,0 +1,12 @@
+
+
+> mvn clean package
+> java -jar target/spring-data-rest-angular-0.0.1-SNAPSHOT.jar
+
+HOME PAGE)) http://localhost:8080/home
+
+  (GET) http://localhost:8080/tasks/search/findByTaskArchived?archivedfalse=0 ... вернуть все элементы которые непомечены (для удаления)
+
+(PATCH) http://localhost:8080/tasks/4 ........................................... пометить элементы(чекбокс) для удаления
+
+ (POST) http://localhost:8080/tasks ............................................. добавить новый элемент
